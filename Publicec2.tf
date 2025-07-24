@@ -6,7 +6,7 @@ module "dsb1-ec2" {
   key            = "Default_Key"
   instance_type  = "t2.micro"
   Public_Subnet  = module.dsb1-network.Public_Subnet_ID_1
-  sg_id          = module.Prod_Security.sg_id
+  sg_id          = module.dsb1-sg.sg_id
   vpc_name       = module.dsb1-network.vpc_name
   private_subnet = module.dsb1-network.Private_Subnet_ID
 }
