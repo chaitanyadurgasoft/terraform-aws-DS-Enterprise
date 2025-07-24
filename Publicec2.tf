@@ -1,5 +1,6 @@
-module "Prod_Ec2" {
-  source         = "../modules/EC2"
+module "dsb1-ec2" {
+  source         = "app.terraform.io/DS-TEP/dsb1-ec2/aws"
+  version        = "1.0.0"
   env            = module.Prod_Network.env
   ami            = "ami-0b05d988257befbbe"
   key            = "Default_Key"

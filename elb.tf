@@ -1,5 +1,6 @@
-module "Prod_ELB" {
-  source         = "../modules/ELB"
+module "dsb1-elb" {
+  source         = "app.terraform.io/DS-TEP/dsb1-elb/aws"
+  version        = "1.0.0"
   tgname         = "Prod-DS-TG"
   vpc_id         = module.Prod_Network.vpc_id
   env            = module.Prod_Network.env
