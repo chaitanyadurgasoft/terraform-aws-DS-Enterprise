@@ -7,5 +7,5 @@ module "dsb1-network" {
   az                  = ["us-east-2a", "us-east-2b", "us-east-2c"]
   Private_Subnet_Cidr = ["172.25.10.0/24", "172.25.20.0/24", "172.25.30.0/24"]
   env                 = "Prod"
-  NGW_ID              = module.Prod_Nat.NGW_ID
+  NGW_ID              = module.dsb1-nat.NGW_ID
 }
